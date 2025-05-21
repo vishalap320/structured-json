@@ -21,6 +21,17 @@ Only one standard library is used:
 
 >  No additional  libraries are used in this code.
 
+
+---
+
+## Use Cases
+
+- Organizing stream-of-consciousness text into structured data
+- Saving personal logs in a readable and machine-processable format
+- Feeding structured data to front-end apps, dashboards, or AI tools
+
+This script builds and prints a clean, categorized JSON structure from journal-like thoughts using only the built-in `json` library.
+
 ---
 
 ## What Can This Code Do?
@@ -69,20 +80,5 @@ structured_data = [
 print(json.dumps(structured_data, indent=4))
 
 
----
-
-## Use Cases
-
-- Organizing stream-of-consciousness text into structured data
-- Saving personal logs in a readable and machine-processable format
-- Feeding structured data to front-end apps, dashboards, or AI tools
-
----
 
 
-
----
-
-## Summary
-
-This script builds and prints a clean, categorized JSON structure from journal-like thoughts using only the built-in `json` library.
