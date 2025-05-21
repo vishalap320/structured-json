@@ -43,6 +43,6 @@ Then, it prints that data as a formatted  JSON string.
 
 ---
 
-## 🧾 Summary
+## Summary
 
 This script builds and prints a clean, categorized JSON structure from journal-like thoughts using only the built-in `json` library.
