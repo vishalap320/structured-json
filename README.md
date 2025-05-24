@@ -39,17 +39,24 @@ Cause: The target directory for saving JSON files doesn't exist yet.
 
 Example:
 FileNotFoundError: [Errno 2] No such file or directory: 'output/BurnedOutTechLead/entry_1.json'
+
 Solution: Before writing the file, ensure the directory exists using
+```sh
 os.makedirs() with exist_ok=True:
 os.makedirs(os.path.dirname(file_path), exist_ok=True)
+```
 
 Example:
 TypeError: Object of type set is not JSON serializable
-Solution: Ensure that only JSON-serializable types (dict, list, str, int, float, bool, None) are written:
-json.dump(data, f, indent=2)  # Make sure `data` only contains serializable types
 
+Solution: Ensure that only JSON-serializable types (dict, list, str, int, float, bool, None) are written:
+```sh
+json.dump(data, f, indent=2)  # Make sure `data` only contains serializable types
+```
 If you must convert non-serializable objects:
+```sh
 json.dump(list(my_set), f)  # Convert set to list before saving
+```
 
 ---
 
@@ -65,21 +72,6 @@ This script builds and prints a clean, categorized JSON structure from journal-l
 
 ---
 
-## What Can This Code Do?
-
-This code defines a structured JSON format that organizes a person's thoughts  into categories such as **health**, **family**, **work**, **emotions**, and more.
-
-Then, it prints that data as a formatted  JSON string.
-
-Training or evaluating structured LLM output systems
-
-Testing JSON schema conformity
-
-Emotional state tracking
-
-Life journaling analysis
-
-Pattern recognition in personal habits
 
 
 # Demo Code
@@ -119,6 +111,23 @@ structured_data = [
 
 # Pretty-print the JSON structure
 print(json.dumps(structured_data, indent=4))
+```
+## What Can This Code Do?
+
+This code defines a structured JSON format that organizes a person's thoughts  into categories such as **health**, **family**, **work**, **emotions**, and more.
+
+Then, it prints that data as a formatted  JSON string.
+
+Training or evaluating structured LLM output systems
+
+Testing JSON schema conformity
+
+Emotional state tracking
+
+Life journaling analysis
+
+Pattern recognition in personal habits
+
 -
 
 
