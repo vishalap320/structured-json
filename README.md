@@ -43,8 +43,15 @@ with open("structured_data.json", "w") as f:
 
 This script builds and prints a clean, categorized JSON structure from journal-like thoughts using only the built-in `json` library.
 
-## Purpose
-This dataset can be used for:
+
+
+---
+
+## What Can This Code Do?
+
+This code defines a structured JSON format that organizes a person's thoughts  into categories such as **health**, **family**, **work**, **emotions**, and more.
+
+Then, it prints that data as a formatted  JSON string.
 
 Training or evaluating structured LLM output systems
 
@@ -55,16 +62,6 @@ Emotional state tracking
 Life journaling analysis
 
 Pattern recognition in personal habits
-
-
-
----
-
-## What Can This Code Do?
-
-This code defines a structured JSON format that organizes a person's thoughts  into categories such as **health**, **family**, **work**, **emotions**, and more.
-
-Then, it prints that data as a formatted  JSON string.
 
 
 # Demo Code
