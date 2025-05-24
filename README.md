@@ -40,18 +40,15 @@ Cause: The target directory for saving JSON files doesn't exist yet.
 Example:
 FileNotFoundError: [Errno 2] No such file or directory: 'output/BurnedOutTechLead/entry_1.json'
 Solution: Before writing the file, ensure the directory exists using
-``bash
 os.makedirs() with exist_ok=True:
 os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
 Example:
 TypeError: Object of type set is not JSON serializable
 Solution: Ensure that only JSON-serializable types (dict, list, str, int, float, bool, None) are written:
-``bash
 json.dump(data, f, indent=2)  # Make sure `data` only contains serializable types
 
 If you must convert non-serializable objects:
-``bash
 json.dump(list(my_set), f)  # Convert set to list before saving
 
 ---
