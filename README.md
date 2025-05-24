@@ -37,18 +37,22 @@ with open("structured_data.json", "w") as f:
 Error 1: FileNotFoundError when trying to write JSON files
 Cause: The target directory for saving JSON files doesn't exist yet.
 
-##Example:
+Example:
 FileNotFoundError: [Errno 2] No such file or directory: 'output/BurnedOutTechLead/entry_1.json'
-Solution: Before writing the file, ensure the directory exists using os.makedirs() with exist_ok=True:
-``os.makedirs(os.path.dirname(file_path), exist_ok=True)
+Solution: Before writing the file, ensure the directory exists using
+``bash
+os.makedirs() with exist_ok=True:
+os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-##Example:
+Example:
 TypeError: Object of type set is not JSON serializable
 Solution: Ensure that only JSON-serializable types (dict, list, str, int, float, bool, None) are written:
-``json.dump(data, f, indent=2)  # Make sure `data` only contains serializable types
+``bash
+json.dump(data, f, indent=2)  # Make sure `data` only contains serializable types
 
 If you must convert non-serializable objects:
-``json.dump(list(my_set), f)  # Convert set to list before saving
+``bash
+json.dump(list(my_set), f)  # Convert set to list before saving
 
 ---
 
